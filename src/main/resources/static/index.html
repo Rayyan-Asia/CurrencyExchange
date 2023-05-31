@@ -67,7 +67,7 @@
 
         // Make API call to get conversion rate and converted amount
         // Replace API_URL with the actual URL of your RESTful API
-        var apiUrl = "API_URL?amount=" + amount + "&from=" + fromCurrency + "&to=" + toCurrency;
+        var apiUrl = "http://localhost:8080/convert?amount=" + amount + "&from=" + fromCurrency + "&to=" + toCurrency;
 
         fetch(apiUrl)
             .then(response => response.json())
