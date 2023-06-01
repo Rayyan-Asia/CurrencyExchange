@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+  <style>
+    #container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #picture {
+      float: right;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+    body {
+      background-image: url('background.avif');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <img id="picture" src="exchange_image.jpg" alt="Image" width="100" height="100">
+  <h2>Currency Converter</h2>
+  <form id="conversionForm">
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" required><br><br>
+
+    <label for="fromCurrency">From Currency:</label>
+    <select id="fromCurrency" name="fromCurrency" required>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <!-- Add more currency options here -->
+    </select><br><br>
+
+    <label for="toCurrency">To Currency:</label>
+    <select id="toCurrency" name="toCurrency" required>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <!-- Add more currency options here -->
+    </select><br><br>
+
+    <input type="submit" value="Convert">
+  </form>
+
+  <br>
+
+  <label for="rate">Conversion Rate:</label>
+  <input type="text" id="rate" name="rate" readonly><br><br>
+
+  <label for="convertedAmount">Converted Amount:</label>
+  <input type="text" id="convertedAmount" name="convertedAmount" readonly>
+</div>
+
+<script>
+  document.getElementById("conversionForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get user input
+    var amount = document.getElementById("amount").value;
+    var fromCurrency = document.getElementById("fromCurrency").value;
+    var toCurrency = document.getElementById("toCurrency").value;
+
+    // Make API call to get conversion rate and converted amount
+    // Replace API_URL with the actual URL of your RESTful API
+    var apiUrl = "http://localhost:8080/convertExternal?amount=" + amount + "&from=" + fromCurrency + "&to=" + toCurrency;
+
+    fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+              document.getElementById("rate").value = data.rate;
+              document.getElementById("convertedAmount").value = data.convertedAmount;
+            })
+            .catch(error => {
+              console.error("Error:", error);
+            });
+  });
+</script>
+</body>
+</html>
