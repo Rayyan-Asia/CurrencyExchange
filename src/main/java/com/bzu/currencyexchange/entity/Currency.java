@@ -1,7 +1,6 @@
 package com.bzu.currencyexchange.entity;
 
 
-import com.bzu.currencyexchange.repository.CurrencyRepository;
 import jakarta.persistence.*;
 
 @Entity
