@@ -24,9 +24,11 @@ public class CurrencyController {
 
         double rate = from.getValue()/to.getValue();
 
-        double convertedAmount = amount * rate;
 
+        double convertedAmount = amount * rate;
+        rate = Math.round(rate*1000.0)/1000.0;
         double roundedAmount = Math.round(convertedAmount * 1000.0) / 1000.0;
+
 
         return new ConversionResult(rate, roundedAmount);
     }
