@@ -19,7 +19,6 @@ class ExchangeRateControllerTest {
 
     @BeforeEach
     void setUp() {
-
         restTemplate = Mockito.mock(RestTemplate.class);
         exchangeRateController = new ExchangeRateController(restTemplate);
     }
