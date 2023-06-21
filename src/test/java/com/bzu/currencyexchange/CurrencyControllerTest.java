@@ -3,12 +3,11 @@ package com.bzu.currencyexchange;
 import com.bzu.currencyexchange.controller.CurrencyController;
 import com.bzu.currencyexchange.entity.Currency;
 import com.bzu.currencyexchange.service.CurrencyService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CurrencyControllerTest {
     private CurrencyService currencyService;
@@ -23,8 +22,8 @@ class CurrencyControllerTest {
     @Test
     void testConvertCurrency() {
         // Mock the currencyService
-        Currency fromCurrency = new Currency("USD", 1.0);
-        Currency toCurrency = new Currency("EUR", 0.85);
+        Currency toCurrency = new Currency("USD", 1.0);
+        Currency fromCurrency = new Currency("EUR", 0.85);
         Mockito.when(currencyService.getCurrencyByCode("USD")).thenReturn(fromCurrency);
         Mockito.when(currencyService.getCurrencyByCode("EUR")).thenReturn(toCurrency);
 
@@ -32,8 +31,8 @@ class CurrencyControllerTest {
         ConversionResult result = currencyController.convertCurrency(100.0, "USD", "EUR");
 
         // Assert the result
-        assertEquals(0.85, result.getRate(), 0.001);
-        assertEquals(85.0, result.getConvertedAmount(), 0.001);
+        Assertions.assertEquals(0.85, result.getRate(), 0.001);
+        Assertions.assertEquals(85.0, result.getConvertedAmount(), 0.001);
     }
 }
 
