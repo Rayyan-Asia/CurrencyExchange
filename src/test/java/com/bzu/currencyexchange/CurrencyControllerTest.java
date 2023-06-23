@@ -24,7 +24,7 @@ class CurrencyControllerTest {
     }
 
     @Test
-    void convertCurrencyWithValidCredentialTest() {
+    public void convertCurrencyWithValidCredentialTest() {
         // Mock the currencyService
         Currency toCurrency = new Currency("USD", 1.0);
         Currency fromCurrency = new Currency("EUR", 0.85);
@@ -44,7 +44,7 @@ class CurrencyControllerTest {
     }
 
     @Test
-    void convertCurrencyWithNullParameterTest() {
+    public void convertCurrencyWithNullParameterTest() {
         // Call the convertCurrency method with null parameters
         ResponseEntity<?> response = currencyController.convertCurrency(100.0, null, "EUR");
 
@@ -54,7 +54,7 @@ class CurrencyControllerTest {
     }
 
     @Test
-    void convertCurrencyWithNonExistentCurrencyTest() {
+    public void convertCurrencyWithNonExistentCurrencyTest() {
         // Mock the currency service to return null for a currency
         when(currencyService.getCurrencyByCode(anyString())).thenReturn(null);
 

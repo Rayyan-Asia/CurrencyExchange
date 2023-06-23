@@ -29,7 +29,7 @@ class ExchangeRateControllerTest {
     }
 
     @Test
-    void convertCurrencyWithNonExistentCurrencyTest() {
+    public void convertCurrencyWithNonExistentCurrencyTest() {
         // Mock the restTemplate and API response
         var apiResult = new ApiResult();
         apiResult.setConversion_rate(0);
@@ -47,7 +47,7 @@ class ExchangeRateControllerTest {
     }
 
     @Test
-    void convertCurrencyWithNullParameterTest() {
+    public void convertCurrencyWithNullParameterTest() {
         // Mock the restTemplate and API response
         var apiResult = new ApiResult();
         apiResult.setConversion_rate(0.85);
@@ -65,7 +65,7 @@ class ExchangeRateControllerTest {
     }
 
     @Test
-    void convertCurrencyWithValidConversionTest() {
+    public void convertCurrencyWithValidConversionTest() {
         // Mock the restTemplate and API response
         var apiResult = new ApiResult();
         apiResult.setConversion_rate(0.85);
