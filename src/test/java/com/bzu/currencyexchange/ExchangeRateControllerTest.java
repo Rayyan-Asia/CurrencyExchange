@@ -1,6 +1,7 @@
 package com.bzu.currencyexchange;
 
 import com.bzu.currencyexchange.controller.ExchangeRateController;
+import com.bzu.currencyexchange.entity.Currency;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -84,6 +85,16 @@ class ExchangeRateControllerTest {
         ConversionResult result = (ConversionResult) response.getBody();
         assertEquals(0.85, result.getRate(), 0.001);
         assertEquals(85.0, result.getConvertedAmount(), 0.001);
+    }
+
+    @Test
+    public void convertCurrencyWithInvalidAmountTest() {
+        // Call the convertCurrency method with a non-existent currency
+        ResponseEntity<?> response = exchangeRateController.convertCurrency(0, "USD", "XYZ");
+
+        // Assert the response status code for non-existent currency
+        Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        Assertions.assertNull(response.getBody());
     }
 
 

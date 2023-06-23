@@ -66,6 +66,24 @@ class CurrencyControllerTest {
         Assertions.assertNull(response.getBody());
     }
 
+    @Test
+    public void convertCurrencyWithInvalidAmountTest() {
+        // Mock the currency service to return null for a currency
+        Currency toCurrency = new Currency("USD", 1.0);
+        Currency fromCurrency = new Currency("EUR", 0.85);
+        Mockito.when(currencyService.getCurrencyByCode("USD")).thenReturn(fromCurrency);
+        Mockito.when(currencyService.getCurrencyByCode("EUR")).thenReturn(toCurrency);
+
+        // Call the convertCurrency method with a non-existent currency
+        ResponseEntity<?> response = currencyController.convertCurrency(0, "USD", "XYZ");
+
+        // Assert the response status code for non-existent currency
+        Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+        Assertions.assertNull(response.getBody());
+    }
+
+
+
 }
 
 

@@ -23,7 +23,7 @@ public class CurrencyController {
     public ResponseEntity<?> convertCurrency(@RequestParam("amount") double amount,
                                              @RequestParam("from") String fromCurrency,
                                              @RequestParam("to") String toCurrency) {
-        if (fromCurrency == null || fromCurrency.isEmpty() || toCurrency == null || toCurrency.isEmpty()) {
+        if (fromCurrency == null || fromCurrency.isEmpty() || toCurrency == null || toCurrency.isEmpty() || amount < 1) {
             // Invalid currency codes provided
             return ResponseEntity.badRequest().build();
         }
