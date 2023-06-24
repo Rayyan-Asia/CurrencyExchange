@@ -1,6 +1,6 @@
 package com.bzu.currencyexchange;
 
-import com.bzu.currencyexchange.controller.CurrencyController;
+import com.bzu.currencyexchange.controller.ExchangeRateInternalController;
 import com.bzu.currencyexchange.entity.Currency;
 import com.bzu.currencyexchange.service.CurrencyService;
 import org.junit.jupiter.api.Assertions;
@@ -13,14 +13,14 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 
-class CurrencyControllerTest {
+class ExchangeRateInternalControllerTest {
     private CurrencyService currencyService;
-    private CurrencyController currencyController;
+    private ExchangeRateInternalController currencyController;
 
     @BeforeEach
     void setUp() {
         currencyService = Mockito.mock(CurrencyService.class);
-        currencyController = new CurrencyController(currencyService);
+        currencyController = new ExchangeRateInternalController(currencyService);
     }
 
     @Test

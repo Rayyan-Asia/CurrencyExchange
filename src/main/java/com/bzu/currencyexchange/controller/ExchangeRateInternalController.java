@@ -3,19 +3,17 @@ package com.bzu.currencyexchange.controller;
 import com.bzu.currencyexchange.ConversionResult;
 import com.bzu.currencyexchange.entity.Currency;
 import com.bzu.currencyexchange.service.CurrencyService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.HttpClientErrorException;
 
 @RestController
-public class CurrencyController {
+public class ExchangeRateInternalController {
 
     private final CurrencyService _currencyService;
 
-    public CurrencyController(CurrencyService currencyService) {
+    public ExchangeRateInternalController(CurrencyService currencyService) {
         _currencyService = currencyService;
     }
 
