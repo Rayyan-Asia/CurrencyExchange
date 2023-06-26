@@ -1,22 +1,22 @@
 {
-	"id": "783f21d6-83b3-474f-a794-ee7b9026995c",
+	"id": "7e73a151-2b9d-4fb0-8a30-570a37ddcaba",
 	"name": "CurrencyExchange",
-	"timestamp": "2023-06-23T14:28:10.201Z",
+	"timestamp": "2023-06-26T18:57:45.102Z",
 	"collection_id": "25622800-390b0072-7c20-4c0f-8e7b-5225665d4ce7",
 	"folder_id": 0,
 	"environment_id": "0",
-	"totalPass": 8,
+	"totalPass": 80,
 	"delay": 0,
 	"persist": true,
 	"status": "finished",
-	"startedAt": "2023-06-23T14:28:08.903Z",
+	"startedAt": "2023-06-26T18:57:36.898Z",
 	"totalFail": 0,
 	"results": [
 		{
 			"id": "debc5638-c50d-4cf8-a574-18f2c094f8ed",
 			"name": "Valid Request",
 			"url": "http://localhost:8080/convert?amount=200&from=EUR&to=USD",
-			"time": 9,
+			"time": 8,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -26,14 +26,50 @@
 			},
 			"testPassFailCounts": {
 				"Convert Currency with Valid Conversion": {
-					"pass": 1,
+					"pass": 10,
 					"fail": 0
 				}
 			},
 			"times": [
-				9
+				10,
+				6,
+				8,
+				8,
+				6,
+				6,
+				7,
+				5,
+				7,
+				8
 			],
 			"allTests": [
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
 				{
 					"Convert Currency with Valid Conversion": true
 				}
@@ -53,14 +89,50 @@
 			},
 			"testPassFailCounts": {
 				"Convert Currency with Null Parameter": {
-					"pass": 1,
+					"pass": 10,
 					"fail": 0
 				}
 			},
 			"times": [
+				4,
+				3,
+				3,
+				4,
+				3,
+				4,
+				3,
+				2,
+				6,
 				4
 			],
 			"allTests": [
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
 				{
 					"Convert Currency with Null Parameter": true
 				}
@@ -70,7 +142,7 @@
 			"id": "855508e0-9929-4a2e-a196-b6133eed6575",
 			"name": "Not Found Currency",
 			"url": "http://localhost:8080/convert?amount=200&from=EUR&to=XYZ",
-			"time": 7,
+			"time": 6,
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found"
@@ -80,14 +152,50 @@
 			},
 			"testPassFailCounts": {
 				"Convert Currency with Non-Existent Currency": {
-					"pass": 1,
+					"pass": 10,
 					"fail": 0
 				}
 			},
 			"times": [
-				7
+				7,
+				5,
+				8,
+				7,
+				6,
+				9,
+				5,
+				6,
+				7,
+				6
 			],
 			"allTests": [
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
 				{
 					"Convert Currency with Non-Existent Currency": true
 				}
@@ -97,6 +205,258 @@
 			"id": "37734fa6-ca2b-4c73-96e2-3af4a29471cb",
 			"name": "Zero Amount",
 			"url": "http://localhost:8080/convert?amount=0&from=EUR&to=USD",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Convert Currency with Null Parameter": true
+			},
+			"testPassFailCounts": {
+				"Convert Currency with Null Parameter": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				2,
+				3,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"allTests": [
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				}
+			]
+		},
+		{
+			"id": "d1316e05-0cde-4322-9453-024877565e5e",
+			"name": "Not Found Currency",
+			"url": "http://localhost:8080/convertExternal?amount=200&from=EUR&to=XYZ",
+			"time": 113,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Convert Currency with Non-Existent Currency": true
+			},
+			"testPassFailCounts": {
+				"Convert Currency with Non-Existent Currency": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				330,
+				99,
+				102,
+				96,
+				145,
+				98,
+				196,
+				91,
+				93,
+				113
+			],
+			"allTests": [
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				},
+				{
+					"Convert Currency with Non-Existent Currency": true
+				}
+			]
+		},
+		{
+			"id": "2e4eb6bc-d448-4efd-876c-820fc53a085e",
+			"name": "Valid Request",
+			"url": "http://localhost:8080/convertExternal?amount=200&from=EUR&to=USD",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Convert Currency with Valid Conversion": true
+			},
+			"testPassFailCounts": {
+				"Convert Currency with Valid Conversion": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				142,
+				103,
+				135,
+				93,
+				90,
+				93,
+				97,
+				94,
+				107,
+				95
+			],
+			"allTests": [
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				},
+				{
+					"Convert Currency with Valid Conversion": true
+				}
+			]
+		},
+		{
+			"id": "a1aa4ac3-73dc-4117-81bd-998a9e738c68",
+			"name": "Empty Parameter",
+			"url": "http://localhost:8080/convertExternal?amount=200&from=EUR",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Convert Currency with empty Parameter": true
+			},
+			"testPassFailCounts": {
+				"Convert Currency with empty Parameter": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				6,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				3
+			],
+			"allTests": [
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				},
+				{
+					"Convert Currency with empty Parameter": true
+				}
+			]
+		},
+		{
+			"id": "8df84658-5eac-4087-9d95-754d87edb515",
+			"name": "Zero Amount",
+			"url": "http://localhost:8080/convertExternal?amount=0&from=EUR&to=USD",
 			"time": 3,
 			"responseCode": {
 				"code": 400,
@@ -107,130 +467,58 @@
 			},
 			"testPassFailCounts": {
 				"Convert Currency with Null Parameter": {
-					"pass": 1,
+					"pass": 10,
 					"fail": 0
 				}
 			},
 			"times": [
+				3,
+				6,
+				3,
+				7,
+				3,
+				4,
+				3,
+				4,
+				3,
 				3
 			],
 			"allTests": [
 				{
 					"Convert Currency with Null Parameter": true
-				}
-			]
-		},
-		{
-			"id": "d1316e05-0cde-4322-9453-024877565e5e",
-			"name": "Not Found Currency",
-			"url": "http://localhost:8080/convertExternal?amount=200&from=EUR&to=XYZ",
-			"time": 412,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {
-				"Convert Currency with Non-Existent Currency": true
-			},
-			"testPassFailCounts": {
-				"Convert Currency with Non-Existent Currency": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				412
-			],
-			"allTests": [
+				},
 				{
-					"Convert Currency with Non-Existent Currency": true
-				}
-			]
-		},
-		{
-			"id": "2e4eb6bc-d448-4efd-876c-820fc53a085e",
-			"name": "Valid Request",
-			"url": "http://localhost:8080/convertExternal?amount=200&from=EUR&to=USD",
-			"time": 154,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Convert Currency with Valid Conversion": true
-			},
-			"testPassFailCounts": {
-				"Convert Currency with Valid Conversion": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				154
-			],
-			"allTests": [
+					"Convert Currency with Null Parameter": true
+				},
 				{
-					"Convert Currency with Valid Conversion": true
-				}
-			]
-		},
-		{
-			"id": "a1aa4ac3-73dc-4117-81bd-998a9e738c68",
-			"name": "Empty Parameter",
-			"url": "http://localhost:8080/convertExternal?amount=200&from=EUR",
-			"time": 4,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"Convert Currency with empty Parameter": true
-			},
-			"testPassFailCounts": {
-				"Convert Currency with empty Parameter": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				4
-			],
-			"allTests": [
+					"Convert Currency with Null Parameter": true
+				},
 				{
-					"Convert Currency with empty Parameter": true
-				}
-			]
-		},
-		{
-			"id": "8df84658-5eac-4087-9d95-754d87edb515",
-			"name": "Zero Amount",
-			"url": "http://localhost:8080/convertExternal?amount=0&from=EUR&to=USD",
-			"time": 5,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {
-				"Convert Currency with Null Parameter": true
-			},
-			"testPassFailCounts": {
-				"Convert Currency with Null Parameter": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				5
-			],
-			"allTests": [
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
+				{
+					"Convert Currency with Null Parameter": true
+				},
 				{
 					"Convert Currency with Null Parameter": true
 				}
 			]
 		}
 	],
-	"count": 1,
-	"totalTime": 598,
+	"count": 10,
+	"totalTime": 2679,
 	"collection": {
 		"requests": [
 			{

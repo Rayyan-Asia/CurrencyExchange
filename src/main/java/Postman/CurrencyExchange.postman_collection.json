@@ -83,12 +83,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convert?amount=200&from=EUR",
-							"protocol": "http",
+							"raw": "{{URL}}/convert?amount=200&from=EUR",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convert"
 							],
@@ -128,12 +126,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convert?amount=200&from=EUR&to=XYZ",
-							"protocol": "http",
+							"raw": "{{URL}}/convert?amount=200&from=EUR&to=XYZ",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convert"
 							],
@@ -175,12 +171,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convert?amount=0&from=EUR&to=USD",
-							"protocol": "http",
+							"raw": "{{URL}}/convert?amount=0&from=EUR&to=USD",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convert"
 							],
@@ -228,12 +222,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convertExternal?amount=200&from=EUR&to=XYZ",
-							"protocol": "http",
+							"raw": "{{URL}}/convertExternal?amount=200&from=EUR&to=XYZ",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convertExternal"
 							],
@@ -279,12 +271,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convertExternal?amount=200&from=EUR&to=USD",
-							"protocol": "http",
+							"raw": "{{URL}}/convertExternal?amount=200&from=EUR&to=USD",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convertExternal"
 							],
@@ -327,12 +317,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convertExternal?amount=200&from=EUR",
-							"protocol": "http",
+							"raw": "{{URL}}/convertExternal?amount=200&from=EUR",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convertExternal"
 							],
@@ -370,12 +358,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/convertExternal?amount=0&from=EUR&to=USD",
-							"protocol": "http",
+							"raw": "{{URL}}/convertExternal?amount=0&from=EUR&to=USD",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"convertExternal"
 							],
@@ -398,6 +384,33 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
 		}
 	]
 }
